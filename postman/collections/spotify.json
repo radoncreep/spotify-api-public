@@ -1,0 +1,922 @@
+{
+	"info": {
+		"_postman_id": "c6f4e7ea-69f6-41d6-97f0-026117de9aea",
+		"name": "spotify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "13274707-c6f4e7ea-69f6-41d6-97f0-026117de9aea"
+	},
+	"item": [
+		{
+			"name": "Tracks",
+			"item": [
+				{
+					"name": "track",
+					"id": "4021e947-56c2-4198-b029-73c21fc48276",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "spotify",
+									"type": "string"
+								},
+								{
+									"key": "challengeAlgorithm",
+									"value": "S256",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "playlist-read-private user-follow-modify playlist-read-collaborative user-follow-read  user-library-modify user-top-read user-library-read",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "{{clientSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{clientID}}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://accounts.spotify.com/api/token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/tracks/?id=2dHHgzDwk4BJdRwy9uXhTO",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"tracks",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2dHHgzDwk4BJdRwy9uXhTO"
+								},
+								{
+									"key": null,
+									"value": "https://open.spotify.com/track?si=263e445c955c4fec",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tracks",
+					"id": "9a9d745d-0c4c-4b2e-9133-4cc573c823ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/tracks/many?ids=6NGCaT5iPlor2ugTfVQijl,3RYD5toNjICNL3sk2cscJ2,2roBgKGkZ0joiKo9lS5cxH",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"tracks",
+								"many"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "6NGCaT5iPlor2ugTfVQijl,3RYD5toNjICNL3sk2cscJ2,2roBgKGkZ0joiKo9lS5cxH"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "feature",
+					"id": "a2d1bef2-e1a7-479f-8d05-427681fcbb5e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/tracks/feature?id=6NGCaT5iPlor2ugTfVQijl",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"tracks",
+								"feature"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6NGCaT5iPlor2ugTfVQijl"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features",
+					"id": "06db7d18-8cb1-412f-a338-a91d8e4d68ca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/tracks/features?ids=6NGCaT5iPlor2ugTfVQijl,3VmSu5ZzZzh7wRXNd1WqhR",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"tracks",
+								"features"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "6NGCaT5iPlor2ugTfVQijl,3VmSu5ZzZzh7wRXNd1WqhR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "analysis",
+					"id": "ce977e17-1664-4822-bfab-49dad95322b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/tracks/analysis/?id=6NGCaT5iPlor2ugTfVQijl",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"tracks",
+								"analysis",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6NGCaT5iPlor2ugTfVQijl",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "d99fbc46-e251-479e-9522-ffe774f80901"
+		},
+		{
+			"name": "Album",
+			"item": [
+				{
+					"name": "getOne",
+					"id": "c7db782f-560e-4aa7-ba20-568cb762319e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/albums/?id=2Wm9AhTq7byuyEIx5QXVWJ",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"albums",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2Wm9AhTq7byuyEIx5QXVWJ"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "d362b9a8-93b9-4f00-bd48-0acc10b86a5d"
+		},
+		{
+			"name": "Artist",
+			"item": [
+				{
+					"name": "getOne",
+					"id": "f3bcb23e-3c87-4b4f-b730-7f19e86975ca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/artists/?id=1fYVmAFB7sC7eDoF3mJXla",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"artists",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1fYVmAFB7sC7eDoF3mJXla"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMany",
+					"id": "29bf9e29-08f6-4fae-a44a-7a1821e73bbd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/artists/many/?ids=1mlAkvaCrzWSxS2ATBZh27,2rxubOde1svVDYAVDy7PDS",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"artists",
+								"many",
+								""
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "1mlAkvaCrzWSxS2ATBZh27,2rxubOde1svVDYAVDy7PDS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TopTracks",
+					"id": "50d91b16-445c-4742-8286-bc1dd4927cbd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/artists/top-tracks/?id=1mlAkvaCrzWSxS2ATBZh27&market=US",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"artists",
+								"top-tracks",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1mlAkvaCrzWSxS2ATBZh27",
+									"description": "artist id"
+								},
+								{
+									"key": "market",
+									"value": "US",
+									"description": "markets are country abbreviations e.g United States of America as \"US\".\nsee \"markets\" folder to request for available to use here"
+								}
+							]
+						},
+						"description": "GET top tracks of an artist for the provided market."
+					},
+					"response": []
+				},
+				{
+					"name": "Related",
+					"id": "06b8463f-c3a9-47c4-bbd4-44ada9fd9591",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/artists/related/?id=1fYVmAFB7sC7eDoF3mJXla&market=NG",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"artists",
+								"related",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1fYVmAFB7sC7eDoF3mJXla",
+									"description": "artist id"
+								},
+								{
+									"key": "market",
+									"value": "NG",
+									"description": "optional"
+								}
+							]
+						},
+						"description": "get artist(s) related to the queried artist id along with provided market."
+					},
+					"response": []
+				},
+				{
+					"name": "Albums",
+					"id": "766d2d18-ba17-4fe0-ba6e-c1a31d0fd0b0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/artists/related/?id=1fYVmAFB7sC7eDoF3mJXla&groups=single&limit=1",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"artists",
+								"related",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1fYVmAFB7sC7eDoF3mJXla"
+								},
+								{
+									"key": "groups",
+									"value": "single",
+									"description": "enum value = \"single\" | \"appears_on\" "
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"description": "response data quantity"
+								}
+							]
+						},
+						"description": "GET artist album(s) whether single or albums the artists appeared on."
+					},
+					"response": []
+				}
+			],
+			"id": "0a311042-6814-4a25-9dd0-cdb555964141"
+		},
+		{
+			"name": "Browse",
+			"item": [
+				{
+					"name": "recommendations",
+					"id": "43c039d7-1976-4831-aa04-7c0ffa2fefc3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/browse/recommendations/?seed_artists=3KhrVd40DJwuzH8uPASUu4&market=US&limit=1&seed_tracks=3cSF4DwHKemiMXsJtsbmzC,6uAkBtwFdy4hucHFFssda9&seed_genres=hiphop",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"browse",
+								"recommendations",
+								""
+							],
+							"query": [
+								{
+									"key": "seed_artists",
+									"value": "3KhrVd40DJwuzH8uPASUu4",
+									"description": "artist(s) id from which recommendations are derived."
+								},
+								{
+									"key": "market",
+									"value": "US",
+									"description": "e.g US, NG, UK etc. To GET market's data see \"markets\" folder"
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"description": "response data limit"
+								},
+								{
+									"key": "seed_tracks",
+									"value": "3cSF4DwHKemiMXsJtsbmzC,6uAkBtwFdy4hucHFFssda9",
+									"description": "track id(s)"
+								},
+								{
+									"key": "seed_genres",
+									"value": "hiphop",
+									"description": "get genre seeds to see acceptable values"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new releases",
+					"id": "7d5b707a-3097-4eb1-b0c5-8326816c1d97",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/browse/new-releases?country=NG&limit=10",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"browse",
+								"new-releases"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "NG"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "categories",
+					"id": "a1c5a39c-3f71-424c-b30a-51be68b5ce1a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/browse/categories?country=NG&locale&limit=2",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"browse",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "NG",
+									"description": "country to get categories from. List can be gotten from the \"markets\" request."
+								},
+								{
+									"key": "locale",
+									"value": null,
+									"description": "(optional) locale/county/state/province of country provided "
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"description": "(default = 1) amount of entries from response"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "dccb0e60-3616-4479-86e7-23de24984b87",
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a48c59dd-3c9d-4061-bc3c-ba5844b08f06",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "00eba6fd-0131-42a4-af84-acd263dff110",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "search",
+					"id": "6835ad48-d40f-4524-99ac-203a0d734e74",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/search?searchQuery=wandecoal&type=artist,album&market=NG&limit=3",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "searchQuery",
+									"value": "wandecoal"
+								},
+								{
+									"key": "type",
+									"value": "artist,album",
+									"type": "text"
+								},
+								{
+									"key": "market",
+									"value": "NG",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "0ff86101-3171-4e85-a1fb-068e1d43d844",
+							"name": "search",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL}}/search?searchQuery=wande coal&type=artist&market=NG&limit=3",
+									"host": [
+										"{{LOCAL}}"
+									],
+									"path": [
+										"search"
+									],
+									"query": [
+										{
+											"key": "searchQuery",
+											"value": "wande coal"
+										},
+										{
+											"key": "type",
+											"value": "artist",
+											"type": "text"
+										},
+										{
+											"key": "market",
+											"value": "NG",
+											"type": "text"
+										},
+										{
+											"key": "limit",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2336"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"920-TNaneDgdW83krk0Z373rv53hF/8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Feb 2023 20:28:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"artists\": {\n        \"href\": \"https://api.spotify.com/v1/search?query=wande+coal&type=artist&market=NG&offset=0&limit=3\",\n        \"items\": [\n            {\n                \"external_urls\": {\n                    \"spotify\": \"https://open.spotify.com/artist/1fYVmAFB7sC7eDoF3mJXla\"\n                },\n                \"followers\": {\n                    \"href\": null,\n                    \"total\": 472228\n                },\n                \"genres\": [\n                    \"afro dancehall\",\n                    \"afropop\",\n                    \"azontobeats\",\n                    \"nigerian hip hop\",\n                    \"nigerian pop\"\n                ],\n                \"href\": \"https://api.spotify.com/v1/artists/1fYVmAFB7sC7eDoF3mJXla\",\n                \"id\": \"1fYVmAFB7sC7eDoF3mJXla\",\n                \"images\": [\n                    {\n                        \"height\": 640,\n                        \"url\": \"https://i.scdn.co/image/ab6761610000e5eb922758dbd78b786c6ae3932f\",\n                        \"width\": 640\n                    },\n                    {\n                        \"height\": 320,\n                        \"url\": \"https://i.scdn.co/image/ab67616100005174922758dbd78b786c6ae3932f\",\n                        \"width\": 320\n                    },\n                    {\n                        \"height\": 160,\n                        \"url\": \"https://i.scdn.co/image/ab6761610000f178922758dbd78b786c6ae3932f\",\n                        \"width\": 160\n                    }\n                ],\n                \"name\": \"Wande Coal\",\n                \"popularity\": 61,\n                \"type\": \"artist\",\n                \"uri\": \"spotify:artist:1fYVmAFB7sC7eDoF3mJXla\"\n            },\n            {\n                \"external_urls\": {\n                    \"spotify\": \"https://open.spotify.com/artist/1dATrNO6y7LHKgZ2DhYQsh\"\n                },\n                \"followers\": {\n                    \"href\": null,\n                    \"total\": 321\n                },\n                \"genres\": [],\n                \"href\": \"https://api.spotify.com/v1/artists/1dATrNO6y7LHKgZ2DhYQsh\",\n                \"id\": \"1dATrNO6y7LHKgZ2DhYQsh\",\n                \"images\": [\n                    {\n                        \"height\": 640,\n                        \"url\": \"https://i.scdn.co/image/ab67616d0000b2738c6781f76175e8209d2ca4a8\",\n                        \"width\": 640\n                    },\n                    {\n                        \"height\": 300,\n                        \"url\": \"https://i.scdn.co/image/ab67616d00001e028c6781f76175e8209d2ca4a8\",\n                        \"width\": 300\n                    },\n                    {\n                        \"height\": 64,\n                        \"url\": \"https://i.scdn.co/image/ab67616d000048518c6781f76175e8209d2ca4a8\",\n                        \"width\": 64\n                    }\n                ],\n                \"name\": \"Wande Coal\",\n                \"popularity\": 32,\n                \"type\": \"artist\",\n                \"uri\": \"spotify:artist:1dATrNO6y7LHKgZ2DhYQsh\"\n            },\n            {\n                \"external_urls\": {\n                    \"spotify\": \"https://open.spotify.com/artist/5RCdjio4ASMQ8CFaSuAl6C\"\n                },\n                \"followers\": {\n                    \"href\": null,\n                    \"total\": 198563\n                },\n                \"genres\": [\n                    \"afro dancehall\",\n                    \"afropop\",\n                    \"azonto\",\n                    \"azontobeats\",\n                    \"nigerian pop\"\n                ],\n                \"href\": \"https://api.spotify.com/v1/artists/5RCdjio4ASMQ8CFaSuAl6C\",\n                \"id\": \"5RCdjio4ASMQ8CFaSuAl6C\",\n                \"images\": [\n                    {\n                        \"height\": 640,\n                        \"url\": \"https://i.scdn.co/image/ab6761610000e5ebe61cc5aa29da787424fe14fe\",\n                        \"width\": 640\n                    },\n                    {\n                        \"height\": 320,\n                        \"url\": \"https://i.scdn.co/image/ab67616100005174e61cc5aa29da787424fe14fe\",\n                        \"width\": 320\n                    },\n                    {\n                        \"height\": 160,\n                        \"url\": \"https://i.scdn.co/image/ab6761610000f178e61cc5aa29da787424fe14fe\",\n                        \"width\": 160\n                    }\n                ],\n                \"name\": \"D'banj\",\n                \"popularity\": 46,\n                \"type\": \"artist\",\n                \"uri\": \"spotify:artist:5RCdjio4ASMQ8CFaSuAl6C\"\n            }\n        ],\n        \"limit\": 3,\n        \"next\": \"https://api.spotify.com/v1/search?query=wande+coal&type=artist&market=NG&offset=3&limit=3\",\n        \"offset\": 0,\n        \"previous\": null,\n        \"total\": 65\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "search Copy",
+					"id": "25dd3119-c140-483f-8eab-be16c8ba2f8e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/search?searchQuery=wandecoal&type=artist,album&market=NG&limit=3",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "searchQuery",
+									"value": "wandecoal"
+								},
+								{
+									"key": "type",
+									"value": "artist,album",
+									"type": "text"
+								},
+								{
+									"key": "market",
+									"value": "NG",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "d3631b4a-c284-4cfa-8900-475ac392085e",
+							"name": "search",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL}}/search?searchQuery=wande coal&type=artist&market=NG&limit=3",
+									"host": [
+										"{{LOCAL}}"
+									],
+									"path": [
+										"search"
+									],
+									"query": [
+										{
+											"key": "searchQuery",
+											"value": "wande coal"
+										},
+										{
+											"key": "type",
+											"value": "artist",
+											"type": "text"
+										},
+										{
+											"key": "market",
+											"value": "NG",
+											"type": "text"
+										},
+										{
+											"key": "limit",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2336"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"920-TNaneDgdW83krk0Z373rv53hF/8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Feb 2023 20:28:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"artists\": {\n        \"href\": \"https://api.spotify.com/v1/search?query=wande+coal&type=artist&market=NG&offset=0&limit=3\",\n        \"items\": [\n            {\n                \"external_urls\": {\n                    \"spotify\": \"https://open.spotify.com/artist/1fYVmAFB7sC7eDoF3mJXla\"\n                },\n                \"followers\": {\n                    \"href\": null,\n                    \"total\": 472228\n                },\n                \"genres\": [\n                    \"afro dancehall\",\n                    \"afropop\",\n                    \"azontobeats\",\n                    \"nigerian hip hop\",\n                    \"nigerian pop\"\n                ],\n                \"href\": \"https://api.spotify.com/v1/artists/1fYVmAFB7sC7eDoF3mJXla\",\n                \"id\": \"1fYVmAFB7sC7eDoF3mJXla\",\n                \"images\": [\n                    {\n                        \"height\": 640,\n                        \"url\": \"https://i.scdn.co/image/ab6761610000e5eb922758dbd78b786c6ae3932f\",\n                        \"width\": 640\n                    },\n                    {\n                        \"height\": 320,\n                        \"url\": \"https://i.scdn.co/image/ab67616100005174922758dbd78b786c6ae3932f\",\n                        \"width\": 320\n                    },\n                    {\n                        \"height\": 160,\n                        \"url\": \"https://i.scdn.co/image/ab6761610000f178922758dbd78b786c6ae3932f\",\n                        \"width\": 160\n                    }\n                ],\n                \"name\": \"Wande Coal\",\n                \"popularity\": 61,\n                \"type\": \"artist\",\n                \"uri\": \"spotify:artist:1fYVmAFB7sC7eDoF3mJXla\"\n            },\n            {\n                \"external_urls\": {\n                    \"spotify\": \"https://open.spotify.com/artist/1dATrNO6y7LHKgZ2DhYQsh\"\n                },\n                \"followers\": {\n                    \"href\": null,\n                    \"total\": 321\n                },\n                \"genres\": [],\n                \"href\": \"https://api.spotify.com/v1/artists/1dATrNO6y7LHKgZ2DhYQsh\",\n                \"id\": \"1dATrNO6y7LHKgZ2DhYQsh\",\n                \"images\": [\n                    {\n                        \"height\": 640,\n                        \"url\": \"https://i.scdn.co/image/ab67616d0000b2738c6781f76175e8209d2ca4a8\",\n                        \"width\": 640\n                    },\n                    {\n                        \"height\": 300,\n                        \"url\": \"https://i.scdn.co/image/ab67616d00001e028c6781f76175e8209d2ca4a8\",\n                        \"width\": 300\n                    },\n                    {\n                        \"height\": 64,\n                        \"url\": \"https://i.scdn.co/image/ab67616d000048518c6781f76175e8209d2ca4a8\",\n                        \"width\": 64\n                    }\n                ],\n                \"name\": \"Wande Coal\",\n                \"popularity\": 32,\n                \"type\": \"artist\",\n                \"uri\": \"spotify:artist:1dATrNO6y7LHKgZ2DhYQsh\"\n            },\n            {\n                \"external_urls\": {\n                    \"spotify\": \"https://open.spotify.com/artist/5RCdjio4ASMQ8CFaSuAl6C\"\n                },\n                \"followers\": {\n                    \"href\": null,\n                    \"total\": 198563\n                },\n                \"genres\": [\n                    \"afro dancehall\",\n                    \"afropop\",\n                    \"azonto\",\n                    \"azontobeats\",\n                    \"nigerian pop\"\n                ],\n                \"href\": \"https://api.spotify.com/v1/artists/5RCdjio4ASMQ8CFaSuAl6C\",\n                \"id\": \"5RCdjio4ASMQ8CFaSuAl6C\",\n                \"images\": [\n                    {\n                        \"height\": 640,\n                        \"url\": \"https://i.scdn.co/image/ab6761610000e5ebe61cc5aa29da787424fe14fe\",\n                        \"width\": 640\n                    },\n                    {\n                        \"height\": 320,\n                        \"url\": \"https://i.scdn.co/image/ab67616100005174e61cc5aa29da787424fe14fe\",\n                        \"width\": 320\n                    },\n                    {\n                        \"height\": 160,\n                        \"url\": \"https://i.scdn.co/image/ab6761610000f178e61cc5aa29da787424fe14fe\",\n                        \"width\": 160\n                    }\n                ],\n                \"name\": \"D'banj\",\n                \"popularity\": 46,\n                \"type\": \"artist\",\n                \"uri\": \"spotify:artist:5RCdjio4ASMQ8CFaSuAl6C\"\n            }\n        ],\n        \"limit\": 3,\n        \"next\": \"https://api.spotify.com/v1/search?query=wande+coal&type=artist&market=NG&offset=3&limit=3\",\n        \"offset\": 0,\n        \"previous\": null,\n        \"total\": 65\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "ce57af5c-68c3-4f7a-88cf-e64ed10c00b0"
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "spotify",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "playlist-read-private user-follow-modify playlist-read-collaborative user-follow-read  user-library-modify user-top-read user-library-read",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{clientSecret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{clientID}}",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://accounts.spotify.com/api/token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "487f6b5d-a808-4dd5-a632-36afb48a781e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "9c720bde-9e0a-404b-9274-a75c4150384a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "ecfa4061-11fa-4b4e-bc81-18b55e7c8371",
+			"key": "clientID",
+			"value": "3d1947cac87e4ed0b92d5a7d78c1ed6b",
+			"type": "string"
+		},
+		{
+			"id": "e0137b3b-e8c1-4e3c-9577-02552728bef3",
+			"key": "clientSecret",
+			"value": "276633cb6cee41d09ad763dd8d47ecdf",
+			"type": "string"
+		},
+		{
+			"id": "340f855e-4a34-4e7f-8fc4-4fa969cbf429",
+			"key": "LOCAL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
